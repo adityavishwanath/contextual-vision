@@ -1,9 +1,12 @@
 #!/usr/bin/env python
+
+import os
+os.system("chmod +x server.py")
+os.system("chmod +x cgi_module_prescription.py")
  
 import BaseHTTPServer
 import CGIHTTPServer
 import cgitb; 
-import os
 
 log_dir = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'logs'))
 #print log_dir
