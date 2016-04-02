@@ -1,4 +1,10 @@
 from __future__ import print_function
+import sys
+import os
+
+sys.path.append("./alchemy_api")
+os.system("python alchemy_api/alchemyapi.py d7a4b54fa1b12a95cd3cba4bbd5c922815f0e6cf")
+
 from alchemyapi import AlchemyAPI
 import json
 
