@@ -8,50 +8,11 @@ os.system("python alchemy_api/alchemyapi.py d7a4b54fa1b12a95cd3cba4bbd5c922815f0
 from alchemyapi import AlchemyAPI
 import json
 
-demo_url = 'http://www.kidsworldfun.com/shortstories_aholeinthefence.php'
-
+#demo_url = 'http://www.kidsworldfun.com/shortstories_aholeinthefence.php'
+demo_text = 'The quick brown fox jumped over the lazy dog.'
 
 # Create the AlchemyAPI Object
 alchemyapi = AlchemyAPI()
-
-print('')
-print('')
-print('')
-print('############################################')
-print('#   Text Extraction Example                #')
-print('############################################')
-print('')
-print('')
-
-print('Processing url: ', demo_url)
-print('')
-
-response = alchemyapi.text('url', demo_url)
-
-if response['status'] == 'OK':
-    print('## Response Object ##')
-    print(json.dumps(response, indent=4))
-    demo_text = json.dumps(response, indent=4)
-    print('')
-    print('## Text ##')
-    print('text: ', response['text'].encode('utf-8'))
-    print('')
-else:
-    print('Error in text extraction call: ', response['statusInfo'])
-
-
-#demo_text = 'Yesterday dumb Bob destroyed my fancy iPhone in beautiful Denver, Colorado. I guess I will have to head over to the Apple Store and buy a new one.'
-#demo_url = 'http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen'
-
-
-print('')
-print('')
-print('')
-print('############################################')
-print('#   Keyword Extraction Example             #')
-print('############################################')
-print('')
-print('')
 
 print('Processing text: ', demo_text)
 print('')
