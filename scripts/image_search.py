@@ -3,9 +3,9 @@ import urllib
 import urllib2
 import json
 
-def main():
-    query = "sunshine"
-    print bing_search(query, 'Image')
+#def main():
+#    query = "sunshine"
+#    print bing_search(query, 'Image')
 
 def bing_search(query, search_type):
     #search_type: Web, Image, News, Video

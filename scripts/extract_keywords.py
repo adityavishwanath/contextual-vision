@@ -1,6 +1,7 @@
 from __future__ import print_function
 import sys
 import os
+from image_search import bing_search
 
 sys.path.append("./alchemy_api")
 os.system("python alchemy_api/alchemyapi.py d7a4b54fa1b12a95cd3cba4bbd5c922815f0e6cf")
@@ -10,6 +11,7 @@ import json
 
 #demo_url = 'http://www.kidsworldfun.com/shortstories_aholeinthefence.php'
 demo_text = 'The quick brown fox jumped over the lazy dog.'
+imagemap = {}
 
 # Create the AlchemyAPI Object
 alchemyapi = AlchemyAPI()
@@ -26,7 +28,9 @@ if response['status'] == 'OK':
     print('')
     print('## Keywords ##')
     for keyword in response['keywords']:
-        print('text: ', keyword['text'].encode('utf-8'))
+        query = keyword['text'].encode('utf-8')
+        imagemap[query] = bing_search(query, 'Image')
+        print('text: ', query)
         print('relevance: ', keyword['relevance'])
         print('sentiment: ', keyword['sentiment']['type'])
         if 'score' in keyword['sentiment']:
