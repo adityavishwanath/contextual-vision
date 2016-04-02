@@ -23,7 +23,7 @@ def bing_search(query, search_type):
     response = request_opener.open(request)
     response_data = response.read()
     json_result = json.loads(response_data)
-    result_list = json_result['d']['results']
+    result_list = json_result['d']['results'][0]['MediaUrl']
     print result_list
     return result_list
 
