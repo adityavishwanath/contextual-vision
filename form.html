@@ -1,0 +1,58 @@
+<form action="/scripts/cgi_module.py" method="post">
+	<br/><br/><br/>
+
+	Patient Name: <input type="text" name="patient_name" placeholder="Adam Smith" /> <br/> <br/>
+
+	Prescription Type: <br/>
+	<input type="radio" name="pres_type" value="tablet" /> Tablet
+	<input type="radio" name="pres_type" value="solution" /> Solution
+	<input type="radio" name="pres_type" value="tincture" /> Tincture
+	<input type="radio" name="pres_type" value="infuse" /> Infuse
+	<br/> <br/>
+
+	Medicine Name: <input type="text" name="medicine_name" placeholder="Paracetamol"/>
+	<br/> <br/>
+
+	Medicine Strength: <input type="text" name="medicine_strength" placeholder="500"/>
+	<select name="medicine_strength_dropdown">
+		<option value="mg" selected>mg</option>
+		<option value="ml">ml</option>
+		<option value="percent">%</option>
+	</select>
+	<br/> <br/>
+
+	Total Quantity: <input type="text" name="total_quantity" placeholder="30"/>
+	<select name="total_quantity_dropdown">
+		<option value="tablets" selected>tablets</option>
+		<option value="ml">ml</option>
+		<option value="drops">drops</option>
+		<option value="ampules">ampules</option>
+		<option value="tbsp">tbsp</option>
+	</select>
+	<br/> <br/>
+
+	Single Dosage: <input type="text" name="single_dosage" placeholder="2"/>
+	<select name="single_dosage_dropdown">
+		<option value="tablets" selected>tablets</option>
+		<option value="ml">ml</option>
+		<option value="drops">drops</option>
+		<option value="ampules">ampules</option>
+		<option value="tbsp">tbsp</option>
+	</select>
+	<br/> <br/>
+
+	Frequency: <br/>
+		<input type="checkbox" name="cb_morning" value="on" /> Morning
+		<input type="checkbox" name="cb_afternoon" value="on" /> Afternoon
+		<input type="checkbox" name="cb_evening" value="on" /> Evening
+	<br/> <br/>
+
+	Meals: <br/>
+		<input type="radio" name="meals" value="before" /> Before
+		<input type="radio" name="meals" value="after" /> After
+		<input type="radio" name="meals" value="na" /> N/A
+	<br/> <br/>
+
+	<input type="submit" value="Submit" />
+
+</form>
